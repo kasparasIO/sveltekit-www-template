@@ -1,3 +1,5 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format"
+	"nav_about": "About",
+	"nav_contact": "Contacts",
+	"nav_services": "Services"
 }

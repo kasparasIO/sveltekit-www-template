@@ -3,7 +3,21 @@ import * as runtime from '$paraglide/runtime.js';
 import type { RequestEvent } from '@sveltejs/kit';
 export const i18n = createI18n(runtime, {
 	prefixDefaultLanguage: 'always',
-	defaultLanguageTag: 'en'
+	defaultLanguageTag: 'en',
+	pathnames: {
+		'/about': {
+			en: '/about',
+			lt: '/apie-mus'
+		},
+		'/services': {
+			en: '/services',
+			lt: '/paslaugos'
+		},
+		'/contact': {
+			en: '/contact',
+			lt: '/kontaktai'
+		}
+	}
 });
 export const getHeaderLang = (event: RequestEvent) => {
 	const acceptLanguage = event.request.headers.get('accept-language');

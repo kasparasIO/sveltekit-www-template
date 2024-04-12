@@ -1,3 +1,5 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format"
+	"nav_about": "Apie Mus",
+	"nav_contact": "Kontaktai",
+	"nav_services": "Paslaugos"
 }
