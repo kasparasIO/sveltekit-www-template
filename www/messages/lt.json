@@ -1,5 +1,10 @@
 {
-	"nav_about": "Apie Mus",
-	"nav_contact": "Kontaktai",
-	"nav_services": "Paslaugos"
+	"nav_docs": "Dokumentacija",
+	"nav_features": "Funckijos",
+	"nav_examples": "Pavyzdžiai",
+	"footer_slogan": "Viskas, ko reikia 'Sveltekit' svetainei",
+	"template": "Šablonas",
+	"footer_contact": "Kontaktai",
+	"footer_email": "el-paštas",
+	"footer_live": "gyvai"
 }

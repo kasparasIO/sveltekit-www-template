@@ -5,17 +5,17 @@ export const i18n = createI18n(runtime, {
 	prefixDefaultLanguage: 'always',
 	defaultLanguageTag: 'en',
 	pathnames: {
-		'/about': {
-			en: '/about',
-			lt: '/apie-mus'
+		'/examples': {
+			en: '/examples',
+			lt: '/pavyzdziai'
 		},
-		'/services': {
-			en: '/services',
-			lt: '/paslaugos'
+		'/features': {
+			en: '/features',
+			lt: '/funkcijos'
 		},
-		'/contact': {
-			en: '/contact',
-			lt: '/kontaktai'
+		'/docs': {
+			en: '/docs',
+			lt: '/dokumentacija'
 		}
 	}
 });

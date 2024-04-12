@@ -6,20 +6,18 @@
  let checkbox: HTMLInputElement;
 </script>
 
-<div class="relative flex items-center">
-<input type="checkbox" bind:this={checkbox} role="button" class="w-7 h-5 absolute z-20 opacity-0">
-    <div id="burger" class="flex flex-col gap-1 items-end">
+<div class="relative flex items-center sm:ml-auto">
+<input type="checkbox" bind:this={checkbox} role="button" class="sm:hidden">
+    <div id="burger" class="flex flex-col gap-1 items-end sm:hidden">
         <div/>
         <div/>
         <div/>
     </div>
-    <nav class="flex flex-col justify-evenly absolute top-10 -right-1.5 z-30 w-[70vw] h-[50vh]
-                 bg-background items-center py-4 px-2 shadow-lg rounded
-                 transition ease-in-out duration-200 scale-x-0 origin-right">
-        <a href="/services" on:click={()=> {checkbox.checked = false}}>{m.nav_services()}</a>
-        <a href="/about" on:click={()=> {checkbox.checked = false}}>{m.nav_about()}</a>
-        <a href="/contact" on:click={()=> {checkbox.checked = false}}>{m.nav_contact()}</a>
-        <div class="flex flex-row w-full justify-center gap-8">
+    <nav class="sm:!scale-100 sm:!w-fit sm:!static sm:!flex-row sm:!shadow-none sm:border-none sm:!h-fit sm:gap-4 md:gap-8">
+        <a href="/examples" on:click={()=> {checkbox.checked = false}}>{m.nav_examples()}</a>
+        <a href="/features" on:click={()=> {checkbox.checked = false}}>{m.nav_features()}</a>
+        <a href="/docs" on:click={()=> {checkbox.checked = false}}>{m.nav_docs()}</a>
+        <div class="flex flex-x w-full justify-center gap-8">
             {#each availableLanguageTags as lang}
             <a 
                 href={i18n.route($page.url.pathname)}
@@ -35,8 +33,16 @@
 </div>
 
 <style lang="postcss">
+    input {
+        @apply w-7 h-5 absolute z-20 opacity-0 block;
+    }
+    nav {
+        @apply flex flex-col justify-evenly absolute top-14 -right-1.5 z-30 w-[70vw] h-[50vh]
+         bg-background items-center py-4 px-2 shadow-xl border-b border-x border-background-secondary
+         rounded transition ease-in-out duration-200 scale-x-0 origin-right;
+    }
     #burger div {
-        @apply bg-foreground h-1 w-6 transition-all ease-in-out duration-150;
+        @apply bg-foreground h-[2.5px] w-6 transition-all ease-in-out duration-150;
     }
     #burger div:nth-child(2) {
         @apply w-7;
@@ -46,7 +52,7 @@
     }
 
     input:checked ~ #burger div:nth-child(1) {
-        @apply rotate-45 translate-x-0 translate-y-[7px];
+        @apply rotate-45 translate-x-0 translate-y-[5px];
     }
     input:checked ~ #burger div:nth-child(3) {
         @apply -rotate-45 translate-x-0 -translate-y-[9px];
@@ -61,7 +67,7 @@
         @apply underline;
     }
     .lang-tag {
-        @apply w-fit;
+        @apply w-fit border-none;
     }
     .lang-tag:first-child {
         @apply relative;

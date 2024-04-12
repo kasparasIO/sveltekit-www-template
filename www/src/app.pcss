@@ -40,6 +40,7 @@
 	}
 	.dark {
 		--background: 222.2 84% 4.9%;
+		--background-secondary: 222 47% 11%;
 		--foreground: 210 40% 98%;
 		--card: 222.2 84% 4.9%;
 		--card-foreground: 210 40% 98%;
@@ -75,7 +76,21 @@
 		font-weight: 400;
 		font-style: normal;
 	}
+	.flex-y {
+		@apply flex flex-col;
+	}
+	.flex-x {
+		@apply flex flex-row;
+	}
 	body {
 		@apply paragraph bg-background text-foreground;
+	}
+}
+@layer components {
+	.link {
+		@apply w-full text-center text-lg font-medium capitalize;
+	}
+	.link:hover {
+		@apply underline;
 	}
 }

@@ -1,5 +1,10 @@
 {
-	"nav_about": "About",
-	"nav_contact": "Contacts",
-	"nav_services": "Services"
+	"nav_docs": "Docs",
+	"nav_features": "Features",
+	"nav_examples": "Examples",
+	"footer_slogan": "All you need for a Sveltekit Website",
+	"template": "Template",
+	"footer_contact": "Contact",
+	"footer_email": "Email",
+	"footer_live": "Live-chat"
 }
